@@ -1,0 +1,15 @@
+[Unit]
+Description=Video Sync Service
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/video_sync.py
+Restart=always
+RestartSec=60s
+User=pi
+Group=pi
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,126 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+#videoList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Playlist Section Styles */
+.playlist-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.playlist-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#new-playlist-name {
+  flex: 1;
+  padding: 0.8rem;
+  background: #333;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 4px;
+}
+
+.playlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.playlist-item {
+  background: #252525;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-item h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.playlist-item button {
+  background: #dc3545;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.playlist-videos {
+  margin-top: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.playlist-video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: #333;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+}
+
+.playlist-video-item button {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+/* Drag-and-drop styles */
+.draggable {
+    transition: transform 0.2s ease;
+    cursor: grab;
+}
+
+.draggable.dragging {
+    cursor: grabbing;
+    opacity: 0.8;
+}
+
+.drag-handle {
+    margin-right: 10px;
+    cursor: ns-resize;
+}
+
+.sortable-chosen {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+}
+
+.update-confirmed {
+    background: #e8f5e9;
+}
