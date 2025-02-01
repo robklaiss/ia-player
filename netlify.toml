@@ -1,0 +1,11 @@
+[build]
+  publish = "public"
+  command = "echo 'No build needed'"
+
+[context.production]
+  site = "eda7ac4f-8190-42f1-8de9-33fdb1a09c22"  # ia-player.netlify.app
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
