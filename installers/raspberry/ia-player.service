@@ -3,7 +3,7 @@ Description=IA Player Service
 After=network.target sound.target
 
 [Service]
-ExecStart=/home/pi/ia-player/.venv/bin/python main.py
+ExecStart=/home/pi/ia-player/.venv/bin/gunicorn --bind 0.0.0.0:5000 main:app
 WorkingDirectory=/home/pi/ia-player
 User=pi
 Restart=always
