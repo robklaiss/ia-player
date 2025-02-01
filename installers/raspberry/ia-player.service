@@ -6,6 +6,7 @@ After=network.target sound.target
 ExecStart=/home/pi/ia-player/.venv/bin/gunicorn --bind 0.0.0.0:5000 main:app
 WorkingDirectory=/home/pi/ia-player
 User=pi
+Group=pi
 Restart=always
 RestartSec=5
 Environment="DISPLAY=:0"
