@@ -1,11 +1,21 @@
 [build]
   publish = "public"
   command = "echo 'No build needed'"
+  functions = "functions"
 
 [context.production]
   site = "eda7ac4f-8190-42f1-8de9-33fdb1a09c22"  # ia-player.netlify.app
+
+[dev]
+  framework = "#static"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
